@@ -1,25 +1,39 @@
 [project]
 name = "sqlalchemy-magic"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "peyro",email = "peyrovskaaa@gmail.com"}
-]
+description = "Utilities for configuring SQLAlchemy sessions and FastAPI dependencies."
 readme = "README.md"
 requires-python = ">=3.13"
+authors = [
+    { name = "peyro", email = "peyrovskaaa@gmail.com" }
+]
+keywords = ["sqlalchemy", "fastapi", "async", "database"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+]
 dependencies = [
     "sqlalchemy (>=2.0.43,<3.0.0)",
     "aiosqlite (>=0.21.0,<0.22.0)",
-    "fastapi (>=0.118.0,<0.119.0)"
+    "fastapi (>=0.118.0,<0.119.0)",
 ]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
     "pytest (>=8.4.2,<9.0.0)",
-    "pytest-asyncio (>=1.2.0,<2.0.0)"
+    "pytest-asyncio (>=1.2.0,<2.0.0)",
 ]
+
+[tool.poetry]
+packages = [
+    { include = "src", from = "alchemy_magic" }
+]
+
+[build-system]
+requires = ["poetry-core>=1.8.0,<2.0.0"]
+build-backend = "poetry.core.masonry.api"
