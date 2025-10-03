@@ -1,0 +1,25 @@
+[project]
+name = "sqlalchemy-magic"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "peyro",email = "peyrovskaaa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy (>=2.0.43,<3.0.0)",
+    "aiosqlite (>=0.21.0,<0.22.0)",
+    "fastapi (>=0.118.0,<0.119.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-asyncio (>=1.2.0,<2.0.0)"
+]

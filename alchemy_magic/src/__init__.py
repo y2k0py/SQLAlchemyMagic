@@ -1,0 +1,1 @@
+from .database.magic_runtime import configure_magic, get_magic, get_session
