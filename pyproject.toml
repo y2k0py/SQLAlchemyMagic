@@ -5,9 +5,10 @@ description = "Utilities for configuring SQLAlchemy sessions and FastAPI depende
 authors = ["peyro <peyrovskaaa@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "alchemy_magic", exclude = ["tests"] },
+    { include = "alchemy_magic" },
     { include = "sqlalchemymagic", from = "alchemy_magic/src" }
 ]
+exclude = ["alchemy_magic/tests/**"]
 keywords = ["sqlalchemy", "fastapi", "async", "database"]
 license = "MIT"
 repository = "https://github.com/y2k0py/SQLAlchemyMagic"
