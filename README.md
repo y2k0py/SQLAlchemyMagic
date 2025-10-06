@@ -64,8 +64,8 @@ Use the synchronous context manager the same way when you only configured `sync_
 `SessionMixin` and `SessionRequired` let you ensure a session is available without threading it through every call.
 
 ```python
-from alchemy_magic.src.sqlalchemy_magic.database.base.mixin import SessionMixin
-from alchemy_magic.src.sqlalchemy_magic.database.decorators.session import SessionRequired
+from alchemy_magic.src.sqlalchemymagic.database.base.mixin import SessionMixin
+from alchemy_magic.src.sqlalchemymagic.database.decorators.session import SessionRequired
 
 
 class UserRepository(SessionMixin):
@@ -87,7 +87,7 @@ async with magic.async_session(commit=False) as session:
 If you prefer to share the same binding across several repositories, create a `DBManager` with the session and register the models or repositories once.
 
 ```python
-from alchemy_magic.src.sqlalchemy_magic.database.base.manager import DBManager
+from alchemy_magic.src.sqlalchemymagic.database.base.manager import DBManager
 
 async with magic.async_session(commit=False) as session:
     manager = DBManager(session)
@@ -109,7 +109,7 @@ The package ships first-class FastAPI dependencies so each request receives an i
 from fastapi import Depends, FastAPI, HTTPException
 
 from alchemy_magic import configure_magic
-from alchemy_magic.src.sqlalchemy_magic.database.fastapi_dependency.magic_manager import get_magic_manager
+from alchemy_magic.src.sqlalchemymagic.database.fastapi_dependency.magic_manager import get_magic_manager
 
 app = FastAPI()
 

@@ -3,10 +3,10 @@ import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 
-from alchemy_magic.src.sqlalchemy_magic.database.base.init import InitMagic
-from alchemy_magic.src.sqlalchemy_magic.database.base.manager import DBManager
-from alchemy_magic.src.sqlalchemy_magic.database.base.mixin import SessionMixin
-from alchemy_magic.src.sqlalchemy_magic.database.decorators.session import SessionRequired
+from alchemy_magic.src.sqlalchemymagic.database.base.init import InitMagic
+from alchemy_magic.src.sqlalchemymagic.database.base.manager import DBManager
+from alchemy_magic.src.sqlalchemymagic.database.base.mixin import SessionMixin
+from alchemy_magic.src.sqlalchemymagic.database.decorators.session import SessionRequired
 
 
 class DummyModel(SessionMixin):

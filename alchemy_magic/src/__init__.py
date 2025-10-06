@@ -1,1 +1,1 @@
-from alchemy_magic.src.sqlalchemy_magic.database import configure_magic, get_magic, get_session
+from alchemy_magic.src.sqlalchemymagic.database import configure_magic, get_magic, get_session
