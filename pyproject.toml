@@ -1,4 +1,4 @@
-﻿[tool.poetry]
+[tool.poetry]
 name = "sqlalchemymagic"
 version = "0.1.0"
 description = "Utilities for configuring SQLAlchemy sessions and FastAPI dependencies."
