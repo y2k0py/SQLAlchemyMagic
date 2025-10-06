@@ -1,10 +1,13 @@
-[tool.poetry]
+﻿[tool.poetry]
 name = "sqlalchemymagic"
 version = "0.1.0"
 description = "Utilities for configuring SQLAlchemy sessions and FastAPI dependencies."
 authors = ["peyro <peyrovskaaa@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "sqlalchemymagic", from = "alchemy_magic" }]
+packages = [
+    { include = "alchemy_magic", exclude = ["tests"] },
+    { include = "sqlalchemymagic", from = "alchemy_magic/src" }
+]
 keywords = ["sqlalchemy", "fastapi", "async", "database"]
 license = "MIT"
 repository = "https://github.com/y2k0py/SQLAlchemyMagic"
